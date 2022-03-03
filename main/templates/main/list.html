@@ -1,0 +1,17 @@
+<!-- display our todolist, each name and item, in a list form -->
+{% extends 'main/base.html' %}
+
+{% block title %}
+Vezi lista jupane
+{% endblock %}
+
+{% block content %}
+    <h1>{{ls.name}}</h1>
+    <ul>
+        {% for item in ls.item_set.all %}
+            {% if item.complete == True %}
+            <li>{{item.text}}</li>  
+            {% endif %}
+        {% endfor %}
+    </ul>
+{% endblock %}
