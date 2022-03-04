@@ -9,7 +9,7 @@ Vezi lista jupane
     <h1>{{ls.name}}</h1>
     <ul>
         {% for item in ls.item_set.all %}
-            {% if item.complete == True %}
+            {% if item.complete == False %}
             <li>{{item.text}}</li>  
             {% endif %}
         {% endfor %}

@@ -1,1 +1,5 @@
 user1 asoo1231jdpoampsd
+
+if logged on ->home si restu unde mai are acces
+else salut si voie buna
+

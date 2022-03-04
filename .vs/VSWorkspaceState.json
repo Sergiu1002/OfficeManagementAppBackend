@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\main",
+    "\\main\\templates",
+    "\\main\\templates\\main",
+    "\\officemngapp"
   ],
+  "SelectedNode": "\\officemngapp\\settings.py",
   "PreviewInSolutionExplorer": false
 }
