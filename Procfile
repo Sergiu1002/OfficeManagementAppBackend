@@ -1,1 +1,1 @@
-web: gunicorn officemngapp.wsgi.application
+web: gunicorn officemngapp.wsgi
