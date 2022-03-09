@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\main",
-    "\\main\\templates",
-    "\\main\\templates\\main",
-    "\\officemngapp"
+    "\\main\\migrations"
   ],
-  "SelectedNode": "\\officemngapp\\settings.py",
+  "SelectedNode": "\\main\\migrations",
   "PreviewInSolutionExplorer": false
 }
