@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import ToDoList, Item
+from .models import ToDoList, Item, angajati
 
 # Create your views here.
 def index(response, id):
