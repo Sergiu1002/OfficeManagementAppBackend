@@ -32,11 +32,11 @@ class birouri(models.Model):
     etaj_birouri = models.PositiveIntegerField(null=True, blank=True)
     hardware_birouri = models.TextField()
 
-class cereri(models.Models):
+class cereri(models.Model):
     tip_cerere = models.CharField(max_length=150)
     motiv_cerere = models.TextField()
 
-class cladiri(models.Models):
+class cladiri(models.Model):
     tara_cladire = models.CharField(max_length=100)
     judet_cladire = models.CharField(max_length=100)
     oras_cladire = models.CharField(max_length=100)
