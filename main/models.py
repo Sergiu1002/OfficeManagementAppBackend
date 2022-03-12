@@ -27,4 +27,20 @@ class angajati(models.Model):
     def __int__(self):
         return self.pk
 
-#class birouri(models.Model):
+class birouri(models.Model):
+    locuri_totale_birouri = models.PositiveIntegerField(null=True, blank=True)
+    etaj_birouri = models.PositiveIntegerField(null=True, blank=True)
+    hardware_birouri = models.TextField()
+
+class cereri(models.Models):
+    tip_cerere = models.CharField(max_length=150)
+    motiv_cerere = models.TextField()
+
+class cladiri(models.Models):
+    tara_cladire = models.CharField(max_length=100)
+    judet_cladire = models.CharField(max_length=100)
+    oras_cladire = models.CharField(max_length=100)
+    strada_cladire = models.CharField(max_length=100)
+    cod_postal_cladire = models.CharField(max_length=100)
+    nr_birouri_cladire = models.PositiveIntegerField(null=True, blank=True)
+
