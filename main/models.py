@@ -31,10 +31,14 @@ class birouri(models.Model):
     locuri_totale_birouri = models.PositiveIntegerField(null=True, blank=True)
     etaj_birouri = models.PositiveIntegerField(null=True, blank=True)
     hardware_birouri = models.TextField()
+    def __int__(self):
+        return self.pk
 
 class cereri(models.Model):
     tip_cerere = models.CharField(max_length=150)
     motiv_cerere = models.TextField()
+    def __int__(self):
+        return self.pk
 
 class cladiri(models.Model):
     tara_cladire = models.CharField(max_length=100)
@@ -43,4 +47,5 @@ class cladiri(models.Model):
     strada_cladire = models.CharField(max_length=100)
     cod_postal_cladire = models.CharField(max_length=100)
     nr_birouri_cladire = models.PositiveIntegerField(null=True, blank=True)
-
+    def __int__(self):
+        return self.pk
