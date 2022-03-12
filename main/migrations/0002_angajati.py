@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
                 ('varsta', models.PositiveIntegerField(blank=True, null=True)),
                 ('gender', models.CharField(choices=[('M', 'M'), ('F', 'F'), ('O', 'O')], default='M', max_length=1)),
                 ('email', models.EmailField(max_length=254)),
-                ('nasterii', models.DateTimeField(default=django.utils.timezone.now)),
+                ('data_nasterii', models.DateTimeField(default=django.utils.timezone.now)),
                 ('nationalitate', models.CharField(max_length=45)),
                 ('adresa', models.CharField(max_length=100)),
             ],

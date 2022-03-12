@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\main",
-    "\\officemngapp"
+    "\\officemngapp",
+    "\\staticfiles"
   ],
-  "SelectedNode": "\\officemngapp\\settings.py",
+  "SelectedNode": "\\main\\models.py",
   "PreviewInSolutionExplorer": false
 }
