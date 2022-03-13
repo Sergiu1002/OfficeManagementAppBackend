@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\main",
-    "\\main\\migrations",
-    "\\officemngapp",
-    "\\staticfiles"
+    "\\officemngapp"
   ],
-  "SelectedNode": "\\main\\migrations\\0003_delete_item_delete_todolist.py",
+  "SelectedNode": "\\main\\__pycache__",
   "PreviewInSolutionExplorer": false
 }

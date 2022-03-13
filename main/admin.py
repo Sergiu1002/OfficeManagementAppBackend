@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import angajati, birouri, cereri, cladiri
+from .models import Profile, Office, Work_request, Building
 # Register your models here.
-admin.site.register(angajati)
-admin.site.register(birouri)
-admin.site.register(cereri)
-admin.site.register(cladiri)
+admin.site.register(Profile)
+admin.site.register(Office)
+admin.site.register(Work_request)
+admin.site.register(Building)
