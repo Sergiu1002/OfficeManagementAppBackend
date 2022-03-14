@@ -10,10 +10,12 @@ class Building(models.Model):
     building_street = models.CharField(max_length=100)
     building_zip_code = models.CharField(max_length=100)
     building_offices = models.PositiveIntegerField(null=True, blank=True)
+    building_floors = models.PositiveIntegerField(null=True, blank=True)
 
 class Office(models.Model):
     office_building = models.ForeignKey(Building, on_delete=models.CASCADE, default= None)
-    office_free_spots = models.PositiveIntegerField(null=True, blank=True)
+    office_total_desks = models.PositiveIntegerField(null=True, blank=True)
+    office_free_desks = models.PositiveIntegerField(null=True, blank=True)
     office_floor = models.PositiveIntegerField(null=True, blank=True)
     office_hardware = models.TextField()
     def __int__(self):

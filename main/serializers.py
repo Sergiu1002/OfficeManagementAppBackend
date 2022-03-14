@@ -15,13 +15,15 @@ class BuildingSerializer(serializers.ModelSerializer):
                   'building_city',
                   'building_street',
                   'building_zip_code',
-                  'building_offices']
+                  'building_offices',
+                  'building_floors']
 
 class OfficeSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Office
         fields = ['office_building',
-                  'office_free_spots',
+                  'office_total_desks',
+                  'office_free_desks',
                   'office_floor',
                   'office_hardware']
 
