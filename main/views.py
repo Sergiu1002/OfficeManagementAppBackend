@@ -1,12 +1,28 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
-from rest_framework import viewsets          # add this
-from main.urls import UserSerializer      # add this
-from .models import Profile    
+from django.shortcuts import render
+from rest_framework import viewsets, generics
+from main.serializers import UserSerializer, BuildingSerializer, OfficeSerializer, ProfileSerializer, Work_requestSerializer  
+from main import models, serializers
+from django.contrib.auth.models import User
 
-class ProfileView(viewsets.ModelViewSet):       # add this
-    serializer_class = UserSerializer          # add this
-    queryset = Profile.objects.all()
+class UserAPIView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class BuildingAPIView(generics.CreateAPIView):
+    queryset = models.Building.objects.all()
+    serializer_class = BuildingSerializer    
+
+class OfficeAPIView(generics.CreateAPIView):
+    queryset = models.Office.objects.all()
+    serializer_class = OfficeSerializer    
+
+class ProfileAPIView(generics.CreateAPIView):
+    queryset = models.Profile.objects.all()
+    serializer_class = ProfileSerializer    
+
+class Work_requestAPIView(generics.CreateAPIView): #viewsets.ModelViewSet
+    queryset = models.Work_request.objects.all()
+    serializer_class = Work_requestSerializer    
 
 def home(response):
     return render(response, "main/home.html", {"name": "ursu"})

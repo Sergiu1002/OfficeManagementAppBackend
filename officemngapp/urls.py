@@ -19,12 +19,14 @@ from django.urls import include, path
 from rest_framework import routers                      
 from main import views
 
-router = routers.DefaultRouter()                        # add this
-router.register(r'main', views.ProfileView, 'main')
-
 urlpatterns = [
     path('', include('main.urls')), # main will be the name of your app
     path('admin/', admin.site.urls),
-    path('api/', include(router.urls)),
+    path('api/user', views.UserAPIView.as_view(), name = 'cox1'),
+    path('api/building', views.BuildingAPIView.as_view(), name = 'cox2'),
+    path('api/office', views.OfficeAPIView.as_view(), name = 'cox3'),
+    path('api/profile', views.ProfileAPIView.as_view(), name = 'cox4'),
+    path('api/work_request', views.Work_requestAPIView.as_view(), name = 'cox5'),
+
 
 ]
