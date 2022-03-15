@@ -20,7 +20,7 @@ from rest_framework import routers
 from main import views
 
 urlpatterns = [
-    path('', include('main.urls')), # main will be the name of your app
+    path('', include('main.urls')),
     path('admin/', admin.site.urls),
     path('api/user', views.UserAPIView.as_view(), name = 'cox1'),
     path('api/building', views.BuildingAPIView.as_view(), name = 'cox2'),
